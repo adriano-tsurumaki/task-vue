@@ -1,0 +1,29 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.vitest.json"
+    }
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@features/*": ["./src/components/features/*"],
+      "@ui/*": ["./src/components/ui/*"],
+      "@domain/*": ["./src/domain/*"],
+      "@infra/*": ["./src/infrastructure/*"],
+      "@utils": ["./src/lib/utils.ts"],
+      "@lib/utils": ["./src/lib/utils.ts"],
+      "@lib/*": ["./src/lib/*"],
+      "@composables/*": ["./src/composables/*"]
+    }
+  }
+}
