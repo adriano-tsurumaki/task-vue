@@ -39,3 +39,11 @@ client/test-results/
 client/playwright-report/
 
 .claude
+# Ignore key files for decrypting credentials and more.
+/config/*.key
+
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+*.mmdb
