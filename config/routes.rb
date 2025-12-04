@@ -6,9 +6,17 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Defines the root path route ("/")
-  # root "posts#index"
+  root "task#index"
 
   namespace :api do
     resources :tasks
+  end
+
+  # Catch-all route: permite Vue Router funcionar com URLs diretas
+  # Qualquer rota não-API retorna o HTML inicial do Vue
+  get "*path", to: "task#index", constraints: ->(req) do
+    !req.path.start_with?("/api") &&
+    !req.path.start_with?("/rails") &&
+    !req.path.start_with?("/cable")
   end
 end

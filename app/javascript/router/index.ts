@@ -5,7 +5,7 @@ import SprintBoard from '@features/sprint/sprint-board.vue'
 import SprintCreation from '@/components/features/sprint/create/sprint-creation.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory('/'),
   routes: [
     { path: '/sprint/backlog', component: SprintBacklog },
     { path: '/sprint/board', component: SprintBoard },

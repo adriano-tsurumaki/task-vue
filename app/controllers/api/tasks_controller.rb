@@ -1,4 +1,7 @@
-class Api::TasksController < ApplicationController
+class Api::TasksController < ActionController::API
+  # Controller de API - retorna apenas JSON
+  # Não precisa de proteção CSRF nem renderização de views
+
   def index
   end
 
